@@ -1,0 +1,89 @@
+ext {
+
+// Android Core
+    compileSdk = 30
+    targetSdk = 30
+    minSdk = 21
+    buildTools = "30.0.3"
+
+// App Versioning
+    versionCodeMajor = 1
+    versionCodeMinor = 0
+    versionCodePatch = 0
+    versionName = "$versionCodeMajor.$versionCodeMinor.$versionCodePatch"
+
+// Dependencies Version - Presentation
+    appcompatVersion = '1.3.1'
+    androidxCoreKtxVersion = '1.6.0'
+    constraintLayoutVersion = '2.1.0'
+    supportV4Version = '1.0.0'
+    materialVersion = '1.4.0'
+    glideVersion = '4.11.0'
+    navigationVersion = '2.3.5'
+    hiltVersion = '2.38.1'
+    lifecycleVersion = '2.4.0-alpha02'
+    pagingVersion = '3.0.0'
+    epoxyVersion = '4.4.0'
+    fragmentExtVersion = '1.3.5'
+
+// Data
+    retrofitVersion = '2.9.0'
+    loggingInterceptorVersion = '4.2.1'
+    gsonVersion = '2.9.0'
+    rxjava = '3.0.0'
+
+// Domain
+    coroutinesCoreVersion = '1.3.3'
+
+// Testing
+    junitVersion = '4.+'
+    androidxJunitVersion = '1.1.3'
+    espressoVersion = '3.4.0'
+
+// App/Presentation Layer
+    appDependencies = [
+            appCompat         : "androidx.appcompat:appcompat:$appcompatVersion",
+            androidxKtx       : "androidx.core:core-ktx:$androidxCoreKtxVersion",
+            material          : "com.google.android.material:material:$materialVersion",
+            constraintlayout  : "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
+            glide             : "com.github.bumptech.glide:glide:$glideVersion",
+            glideCompiler     : "com.github.bumptech.glide:compiler:$glideVersion",
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:$navigationVersion",
+            navigationUi      : "androidx.navigation:navigation-ui-ktx:$navigationVersion",
+            hilt              : "com.google.dagger:hilt-android:$hiltVersion",
+            hiltCompiler      : "com.google.dagger:hilt-android-compiler:$hiltVersion",
+            viewmodel         : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
+            livedata          : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion",
+            lifeCycleCompiler : "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion",
+            supportV4         : "androidx.legacy:legacy-support-v4:$supportV4Version",
+            paging            : "androidx.paging:paging-runtime-ktx:$pagingVersion",
+            epoxy             : "com.airbnb.android:epoxy:$epoxyVersion",
+            epoxyDatabinding  : "com.airbnb.android:epoxy-databinding:$epoxyVersion",
+            epoxyGlide        : "com.airbnb.android:epoxy-glide-preloading:$epoxyVersion",
+            epoxyProcessor    : "com.airbnb.android:epoxy-processor:$epoxyVersion",
+            fragmentExtVersion: "androidx.fragment:fragment-ktx:$fragmentExtVersion"
+
+    ]
+
+    dataDependencies = [
+            retrofit          : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion",
+            gson              : "com.squareup.retrofit2:converter-gson:$gsonVersion",
+            rxjavaAdapter     : "com.squareup.retrofit2:adapter-rxjava3:$retrofitVersion",
+            rxjavaAndroid     : "io.reactivex.rxjava3:rxandroid:$rxjava",
+            rxjavaKotlin      : "io.reactivex.rxjava3:rxkotlin:$rxjava",
+            rxjava            : "io.reactivex.rxjava3:rxjava:$rxjava"
+
+    ]
+//
+//domainDependencies = [
+//coroutinesCore: "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesCoreVersion"
+//]
+
+    testDependencies = [
+            junit        : "junit:junit:$junitVersion",
+            androidxJunit: "androidx.test.ext:junit:$androidxJunitVersion",
+            espressoCore : "androidx.test.espresso:espresso-core:$espressoVersion"
+    ]
+
+}

@@ -21,7 +21,7 @@ class MainViewModel @Inject constructor(): ViewModel() {
                 while (i < 5) { // computation loop, just wastes CPU
                     // print a message twice a second
                     if (System.currentTimeMillis() >= nextPrintTime) {
-                        println("job: I'm sleeping ${i++} ... ${Thread.currentThread().name}")
+                        println("job:  sleeping ${i++} ... ${Thread.currentThread().name}")
                         nextPrintTime += 500L
                     }
                 }

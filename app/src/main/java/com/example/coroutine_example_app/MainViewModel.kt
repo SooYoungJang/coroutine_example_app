@@ -27,11 +27,12 @@ class MainViewModel @Inject constructor(): ViewModel() {
                 }
             }
 
-
             withContext(Dispatchers.Default) {
                 delay(1300L) // delay a bit
                 println("main: I'm tired  waiting! ${Thread.currentThread().name}")
             }
+
+            
         }
     }
 }
